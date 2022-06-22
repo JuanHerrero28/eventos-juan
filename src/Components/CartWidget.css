@@ -1,0 +1,21 @@
+.CartWidget {
+    background-color: aliceblue;
+    margin: 30px;
+    border-radius: 3px;
+    border: none;
+    font-size: 15px;
+    border-radius: 10%;
+    padding: 5px 10px;
+    transition: all .3s;
+}
+
+.CartWidget:hover {
+    cursor: pointer;
+    color: rgb(8, 8, 8);
+    background-color: rgb(65, 225, 92);
+}
+
+.CartWidget:focus {
+    outline: none;
+}
+
