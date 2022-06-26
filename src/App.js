@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
      <Navbar />
-     <ItemListContainer />
+     <ItemListContainer greeting= "¡Proximos Eventos!" />
     </div>
     
   );
