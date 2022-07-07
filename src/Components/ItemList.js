@@ -7,8 +7,8 @@ export const ItemList = ({listadoProductos}) => {
 
     return (
 
-        <div className="container">
-            {listadoProductos.map((unProducto) => <Item banda={unProducto.banda} img={unProducto.img} precio={unProducto.precio} />)}
+        <div className="itemlist-container">
+            {listadoProductos.map((unProducto) => <Item banda={unProducto.banda} img={unProducto.img} precio={unProducto.precio} category={unProducto.category} />)}
         </div>
 
     )

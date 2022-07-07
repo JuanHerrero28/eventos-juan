@@ -3,15 +3,19 @@ import ItemCount from './Components/ItemCount';
 import { ItemDetailCotainer } from './Components/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer';
 import Navbar from './Components/Navbar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
-    <div>
+    <BrowserRouter>
      <Navbar />
-     {/* <ItemListContainer greeting= "¡Proximos Eventos!" />
-     <ItemCount stock = {6}  /> */}
-     <ItemDetailCotainer />
-    </div>
+     <Routes>
+       <Route path="/" element={<ItemListContainer greeting= "¡Proximos Eventos!" />} />
+       <Route path="/category/:idcategoria" element={<ItemListContainer greeting= "Eventos por Genero" />} />
+       <Route path="/Item" element={<ItemDetailCotainer />} />
+     </Routes>
+    </BrowserRouter>
     
   );
 }
