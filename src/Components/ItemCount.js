@@ -3,7 +3,7 @@ import './ItemCount.css';
 import Swal from 'sweetalert2';
 
 
-function ItemCount ({ stock }){
+function ItemCount ({ stock, onAdd }){
     const [num, setNum] = useState(0);
 
     const sumar = () => {
@@ -37,7 +37,7 @@ function ItemCount ({ stock }){
             <button onClick={sumar}> + </button>
             <button onClick={resta}> - </button>
             <button onClick={reiniciar}> Reiniciar </button>
-            <button className='botonAgregar'>{ num > 0 ? `Agregar al carrito` : `Elegi tu cantidad`}</button>
+            <button className='botonAgregar' onClick={()=> onAdd()}>{ num > 0 ? `Agregar al carrito` : `Elegi tu cantidad`}</button>
 
             </div>
             

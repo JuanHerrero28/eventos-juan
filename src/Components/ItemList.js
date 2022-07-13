@@ -1,15 +1,14 @@
-import React from "react";
-import { Item } from "./Item";
+import React from 'react';
+import { Item } from './Item';
 import './ItemList.css';
-export const ItemList = ({listadoProductos}) => {
 
-    console.log('listadoProductos',listadoProductos)
 
-    return (
-
-        <div className="itemlist-container">
-            {listadoProductos.map((unProducto) => <Item banda={unProducto.banda} img={unProducto.img} precio={unProducto.precio} category={unProducto.category} />)}
-        </div>
-
-    )
-}
+export const ItemList = ({ items }) => {
+  return (
+    <section className="flex-row">
+      {items?.map((item) => (
+        <Item {...item} key={item.id} />
+      ))}
+    </section>
+  );
+};

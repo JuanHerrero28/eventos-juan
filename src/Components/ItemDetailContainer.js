@@ -1,38 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from 'react';
+import { ItemDetail } from './ItemDetail';
+import { data } from '../data/data';
+import { useParams } from 'react-router-dom';
 
-import ItemDetail from "./ItemDetail";
+export const ItemDetailContainer = () => {
+  const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(true);
 
+  const { itemId } = useParams();
 
-const eventos = {
-    id: 1,
-    banda: "Banda 1",
-    img: "./img/banda 3.jpg",
-    lugar: "Av. Federico Lacroze 3455, C1426 EAB",
-    fecha: "26 de julio",
-    horario: "21:00 a 23:00hs",
-    precio: 3500,
-    stock: 10
+  console.log(itemId);
+
+  useEffect(() => {
+    setLoading(true);
+    const getItems = new Promise((resolve) => {
+      setTimeout(() => {
+        const myData = data.find((item) => item.id === itemId);
+
+        resolve(myData);
+      }, 1000);
+    });
+
+    getItems
+      .then((res) => {
+        setProduct(res);
+      })
+      .finally(() => setLoading(false));
+  }, [itemId]);
+
+  return loading ? <h2>CARGANDO...</h2> : <ItemDetail {...product} />;
 };
-
-
-export const ItemDetailCotainer = () => {
-    const [data, setData] = useState({});
-
-    useEffect(() => {   
-        const getData = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(eventos);
-            }, 3000)
-        });
-        getData.then(res => setData(res));
-    }, [])
-
-
-
-
-    return (
-        <ItemDetail data={data} />
-    )
-}
-
-export default ItemDetailCotainer;

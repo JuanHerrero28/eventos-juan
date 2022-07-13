@@ -17,7 +17,7 @@ export const Navbar = () => {
             {categories.map((cat) => {
               return (
 
-                <Link to={cat.address} className="links">
+                <Link to={cat.address} className="links" key={cat.id}>
                 {cat.text}
                 </Link>
 
