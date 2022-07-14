@@ -1,8 +1,12 @@
 import CartWidget from './CartWidget';
 import './Navbar.css';
 import {Link} from 'react-router-dom'
+import { useContext } from 'react';
+import CartContext from './CartContext';
 
 export const Navbar = () => {
+  const { contextFunction } = useContext (CartContext);
+  contextFunction();
    const categories = [
     { id: 1, address: '/', text: 'TODOS LOS EVENTOS'},
     { id: 2, address: '/category/rock', text: 'ROCK'},
