@@ -1,5 +1,6 @@
 import React, {useState, useContext} from "react";
 
+
 const CartContext = React.createContext([]);
 
 export const useCartContext = () => useContext(CartContext);
@@ -13,7 +14,7 @@ const CartProvider = ({children}) => {
         setCart(newCart)
     } */
 
-    // Utilizando Map
+    // Con esta funcion agregamos productos al carrito de la siguiente manera,  si el producto no se encuentra en el carrito, en el else setamos un array nuevo, con todos los obejtos que ya estaban antes y creamos un nuevos objeto que va a tener todos los campos que tenia el item con la cantidad y si el producto se encuentra en el carrito creamos un nuevo array utilizando el metodo map aunmentando la cantidad por el nuevo valor.
     const addProduct = (item, quantity) => {
         if (isInCart(item.id)){
             setCart(cart.map(product => {
@@ -24,12 +25,16 @@ const CartProvider = ({children}) => {
         }
     }
 
-
+// con esta funcion borramos todos los productos que se encuentran en el carrito seteandolo con un array vacio
     const clearCart = () => setCart([]);
 
+// con esta funcion aplicando el metodo find para saber si un producto se encuentra en el carrito delvolviendonos el objeto o undifined
     const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
 
+    // con esta funcion removemos el producto del carrito pasando el id del producto y su vez setamos el carrrito y aplicamos el metodo filter dejando pasar todos los productos que no tengan el id del producto que queremos eliminar formando un nuevo array de todos los prodcutos que no tienen ese id
     const removeProduct = (id) => setCart(cart.filter(product => product.id !== id));
+
+    
 
     const totalPrice = () => {
         return cart.reduce((prev, act) => prev + act.quantity * act.price, 0)

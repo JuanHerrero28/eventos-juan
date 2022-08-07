@@ -1,0 +1,13 @@
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: 10px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  justify-content: space-around;
+
+}

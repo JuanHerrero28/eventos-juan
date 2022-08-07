@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { useCartContext } from '../CartContext/CartContex';
-
+import './ItemDetail.css';
 
 export const ItemDetail = ({ data }) => {
     const [goToCart, setGoToCart] = useState(false);
@@ -15,11 +15,11 @@ export const ItemDetail = ({ data }) => {
     }
 
     return (
-        <div className="container">
+        <div className="container1">
             <div className="detail">
                 <img className="detail_image" src={data.image} alt="" />
                 <div className="content">
-                    <h1>{data.banda}</h1>
+                    <h1 className='title-detail'>{data.banda}</h1>
                     {
                         goToCart
                         ? <Link to='/cart'>Terminar Compra</Link>

@@ -1,0 +1,37 @@
+.container{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.nav-logo{
+    text-decoration: none;
+    margin: 15px;
+    letter-spacing: 5px;
+    font-size: 25px;
+    color: aliceblue;
+    
+}
+
+
+.nav__link {
+    
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: aliceblue;
+    font-size: 14px;
+    
+}
+
+.nav__link:hover{
+    cursor: pointer;
+    color: rgb(65, 225, 92);
+    
+}
+
+.nav-logo:hover{
+    cursor: pointer;
+    color: rgb(65, 225, 92);
+}

@@ -4,6 +4,9 @@ import React, {useState, useEffect} from "react";
 import { useParams } from 'react-router-dom'
 import { getFirestore, collection, getDocs, query, where } from "firebase/firestore";
 
+// 1 Importo el servicio Firestore
+// 2 Creo un puntero al dato que queremos traer
+// 3 Traer el dato con una promesa
 
 export const ItemListContainer = ({ texto }) => {
     const [data, setData] = useState([]);

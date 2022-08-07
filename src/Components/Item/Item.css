@@ -1,0 +1,18 @@
+.item-card{
+  display: flex;
+  flex-direction: column;
+  flex: 0 40%;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 7px 6px 12px -1px rgba(72, 72, 72, 0.77);
+  -webkit-box-shadow: 7px 6px 12px -1px rgba(72, 72, 72, 0.77);
+  -moz-box-shadow: 7px 6px 12px -1px rgba(72, 72, 72, 0.77);
+  background-color: rgb(133, 121, 121);
+  padding-top: 10px;
+}
+ img{
+    height: 200px;
+ }

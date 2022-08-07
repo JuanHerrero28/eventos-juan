@@ -1,9 +1,14 @@
 import Item from "../Item/Item";
 import React from "react";
+import './ItemList.css';
+
 
 const ItemList = ({data = []}) => {
     return (
-        data.map(eventos => <Item key={eventos.id} info={eventos} />)
+        <section className="flex-row">
+        
+        {data.map(eventos => <Item key={eventos.id} info={eventos} />)}
+        </section>
     )
 }
 
