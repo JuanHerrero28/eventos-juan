@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/eventos-juan/static/css/main.bc041531.css",
+    "main.js": "/eventos-juan/static/js/main.43842788.js",
+    "static/js/787.e564e825.chunk.js": "/eventos-juan/static/js/787.e564e825.chunk.js",
+    "index.html": "/eventos-juan/index.html",
+    "main.bc041531.css.map": "/eventos-juan/static/css/main.bc041531.css.map",
+    "main.43842788.js.map": "/eventos-juan/static/js/main.43842788.js.map",
+    "787.e564e825.chunk.js.map": "/eventos-juan/static/js/787.e564e825.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc041531.css",
+    "static/js/main.43842788.js"
+  ]
+}
